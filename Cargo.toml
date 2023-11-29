@@ -1,8 +1,12 @@
-[package]
-name = "tagger"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [
+    "interface",
+    "backend"
+]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# We use the 2021 resolver (the latest).
+resolver = "2"
 
-[dependencies]
+[workspace.dependencies]
+log = "0.4.20"
+env_logger = "0.10.1"
