@@ -1,14 +1,11 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
+pub mod structured_name;
+pub mod structured_path;
+pub mod tags;
 #[cfg(test)]
-mod tests {
-    use super::*;
+pub mod tests;
+pub mod timestamp;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub use structured_name::*;
+pub use structured_path::*;
+pub use tags::*;
+pub use timestamp::*;
